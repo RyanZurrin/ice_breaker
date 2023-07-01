@@ -26,9 +26,10 @@ def scrape_user_tweets(username, num_tweets=5):
 
     tweet_list = []
     for tweet in tweets.data:
-        tweet_dict = {}
-        tweet_dict["text"] = tweet["text"]
-        tweet_dict["url"] = f"https://twitter.com/{username}/status/{tweet.id}"
+        tweet_dict = {
+            "text": tweet["text"],
+            "url": f"https://twitter.com/{username}/status/{tweet.id}",
+        }
         tweet_list.append(tweet_dict)
 
     return tweet_list

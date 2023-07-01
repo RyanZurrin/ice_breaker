@@ -30,6 +30,4 @@ def lookup(name: str) -> str:
         input_variables=["name_of_person"], template=template
     )
 
-    twitter_username = agent.run(prompt_template.format_prompt(name_of_person=name))
-
-    return twitter_username
+    return agent.run(prompt_template.format_prompt(name_of_person=name))

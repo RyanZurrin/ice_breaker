@@ -50,5 +50,3 @@ def ice_break_with(name: str) -> Tuple[Summary, IceBreaker, TopicOfInterest, str
     )
 
 
-if __name__ == "__main__":
-    pass
