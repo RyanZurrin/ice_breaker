@@ -26,6 +26,4 @@ def lookup(name: str) -> str:
     prompt_template = PromptTemplate(
         input_variables=["name_of_person"], template=template
     )
-    linkedin_username = agent.run(prompt_template.format_prompt(name_of_person=name))
-
-    return linkedin_username
+    return agent.run(prompt_template.format_prompt(name_of_person=name))
